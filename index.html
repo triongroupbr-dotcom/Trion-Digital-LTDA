@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protocolo Black</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              green: {
+                300: '#86efac',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+                900: '#14532d',
+              },
+              red: {
+                300: '#fca5a5',
+                400: '#f87171',
+                500: '#ef4444',
+                600: '#dc2626',
+                800: '#991b1b',
+                900: '#7f1d1d',
+              }
+            },
+            fontFamily: {
+              mono: ['Courier New', 'Courier', 'monospace'],
+              orbitron: ['Arial', 'sans-serif'], // Fallback
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+      
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      
+      .glitch {
+        position: relative;
+      }
+      
+      .glitch::before,
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      body {
+        background-color: #000;
+        color: #f87171;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
